@@ -8,14 +8,14 @@ namespace Esercizio_S1_D4_M4
 {
     internal class Operazioni
     {
-        private string _cognome;
+        private string _cognome = "Aucone";
         public string Cognome
         {
             get { return _cognome; }
             set { _cognome = value; }
         }
 
-        private string _nome;
+        private string _nome = "Alessandro";
 
         public string Nome
         {
@@ -23,7 +23,7 @@ namespace Esercizio_S1_D4_M4
             set { _nome = value; }
         }
 
-        private string _passwordcorretta;
+        private string _passwordcorretta = "Epicode";
 
         public string PasswordCorretta
         {
@@ -47,8 +47,6 @@ namespace Esercizio_S1_D4_M4
                 string FirstName = Console.ReadLine();
                 Console.WriteLine("Password");
                 string Password = Console.ReadLine();
-
-                // manca come far rimanere i dati 
 
                 if (LastName == Cognome && FirstName == Nome && Password == PasswordCorretta) {
                     Console.WriteLine($"Benvenuto/a {_nome} {_cognome}");
@@ -83,7 +81,7 @@ namespace Esercizio_S1_D4_M4
             {
                 Console.WriteLine("Attenzione sei già loggato");
                 menu() ;
-            };
+            }
         }
 
 
@@ -92,9 +90,11 @@ namespace Esercizio_S1_D4_M4
             if (_accesso == false)
             {
                 Console.WriteLine("Errore, nessun accesso disponibile");
+                menu();
             } else {
                 _accesso = false;
                 Console.WriteLine("Logout completato, arrivederci");
+                menu();
             }
             
         }
@@ -144,7 +144,8 @@ namespace Esercizio_S1_D4_M4
             }
             else if (scelta == 5)
             {
-                // chiudere console
+                Console.WriteLine("Arrivederci");
+                Console.ReadLine() ;
             }
             else
             {
@@ -157,4 +158,4 @@ namespace Esercizio_S1_D4_M4
             }
         }
     }
-}
+

@@ -10,7 +10,8 @@ namespace Esercizio_S1_D4_M4
     {
         static void Main(string[] args)
         {
-            menu();
+            Operazioni operazioni = new Operazioni();
+            operazioni.menu();
         }
     }
 }
