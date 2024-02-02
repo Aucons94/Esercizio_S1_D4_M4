@@ -24,7 +24,6 @@ namespace Esercizio_S1_D4_M4
         }
 
         private string _passwordcorretta = "Epicode";
-
         public string PasswordCorretta
         {
             get { return _passwordcorretta; }
@@ -58,7 +57,7 @@ namespace Esercizio_S1_D4_M4
                 else
                 {
                     Console.WriteLine("Dati errati desidera tornare al menù principale o riprovare ?");
-                Console.WriteLine("1 - Menù");
+                    Console.WriteLine("1 - Menù");
                     Console.WriteLine("2 - Riprovare login");
 
                     int scelta = int.Parse(Console.ReadLine());
